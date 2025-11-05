@@ -1,0 +1,14 @@
+/* 봄바람체 */
+@font-face {
+    font-family: 'HsBombaram21';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/HSBombaram21-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+/* 레베카체 */
+@font-face {
+    font-family: 'Rebecca';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_Rebecca.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
