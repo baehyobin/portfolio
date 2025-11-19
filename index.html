@@ -11,11 +11,6 @@
     <!--swiper-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!--플러그인 필수 css cdn 연결-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <!--플러그인 필수 JS cdn 연결-->
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- 글꼴 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <!-- design -->
@@ -29,209 +24,236 @@
 <body>
     <header>
         <nav>
-            <a href="#home" class="active">Home</a>
-            <a href="#profile">Profile</a>
-            <a href="#web_project">WebProject</a>
-            <a href="#other_project">Design</a>
+            <a href="#" class="homebtn active">Home</a>
+            <a href="#" class="profilebtn">Profile</a>
+            <a href="#" class="webprojectbtn">WebProject</a>
+            <a href="#" class="designbtn">Design</a>
         </nav>
         <a href="#profile">Contact</a>
     </header>
     <main>
-        <!-- 내일 끝내놓아야하는거 : 스크롤조정 -->
-        <!-- 1page-Home -->
-        <div id="home">
-            <ul class="home_icons">
-                <li>
-                    <p>기획</p>
-                    <span><img src="./images/blub.svg" alt="#"></span>
-            </li>
-                <li>
-                    <p>Figma</p>
-                    <span><img src="./images/figma.svg" alt="#"></span>
-            </li>
-            <li>
-                <p>Photoshop</p>
-                <span><img src="./images/photoshop.svg" alt="#"></span>
-            </li>
-            <li>
-                <p>illustrator</p>
-                <span><img src="./images/illust.svg" alt="#"></span>
-            </li>
-            <li>
-                <p>HTML</p>
-                <span><img src="./images/html.svg" alt="#"></span>
-            </li>
-            <li>
-                <p>CSS</p>
-                <span><img src="./images/css.svg" alt="#"></span>
-            </li>
-            <li>
-                <p>JavaScript</p>
-                <span><img src="./images/js.svg" alt="#"></span>
-            </li>
-        </ul>
-        <!-- 메인 문구 -->
-            <div class="title">
-                <p>끊임없이 <em>소통하는</em> 디자이너</p>
-                <h1>Portfolio</h1>
-            </div>
-        </div>
-        <!-- 2page-profile -->
-        <div id="profile">
-            <!-- 왼쪽 -->
-            <div class="left_info">
-                <h2>Bae hyobin</h2>
-                <p>1999.08.24</p>
-                <span><img src="./images/profilepicture.png" alt="프로필사진"></span>
-                <p>contact</p>
-                <p>hyobin9824@gmail.com</p>
-                <p>010-9288-9172</p>
-            </div>
-            <ul class="right_info">
-                <li class="profile_detail education">
-                    <h3>Education</h3>
-                    <p><span>2025 . 12</span><span>그린컴퓨터아트학원 UI/UX웹디자인&웹퍼블리셔 과정 수료</span></p>
-                    <p><span>2025 . 02</span><span>경기대학교 일어일문전공/문예창작과 학사 졸업 </span></p>
-                    <p><span>2018 . 02</span><span>부광여자고등학교 졸업</span></p>
-                </li>
-                <li class="profile_detail license">
-                    <h3>License</h3>
-                    <p><span>2024 . 12</span><span>JPT 일본어 능력 시험 655점</span><span>YBM</span></p>
-                    <p><span>2019 .  04</span><span>운전면허 2종보통</span><span>인천서부경찰서</span></p>
-                </li>
-                <li class="profile_detail sub_profile">
-                    <h3>Profile</h3>
-                    <p><span>Live</span><span>인천광역시 서구</span></p>
-                    <p><span>MBTI</span><span>INTP</span></p>
-                    <p><span>Hobby</span><span>해외 뮤지컬 감상, 수공예</span></p>
-                    <p><span>Like</span><span>찻잔, 동물</span></p>
-                    <p><span>Goal</span><span>소통하며 나아가는 기획자</span></p>
-                    <p><span>Personality</span><span>좋은 이해자, 성실함, 신중함</span></p>
-                </li>
-                <li class="profile_detail skill">
-                    <h3>Skill</h3>
-                    <ul class="skill_info">
+        <div class="swiper wrap">
+            <div class="swiper-wrapper">
+                <!-- 1page-Home -->
+                <div class="swiper-slide" id="home">
+                    <ul class="home_icons">
                         <li>
-                            <img src="./images/blub.svg" alt="기획">
-                            <img src="./images/gauge.png" alt="바탕">
-                            <img src="./images/gauge001.png" alt="기획게이지">
+                            <p>기획</p>
+                            <span><img src="./images/blub.svg" alt="#"></span>
                         </li>
                         <li>
-                            <img src="./images/figma.svg" alt="피그마">
-                            <img src="./images/gauge.png" alt="바탕">
-                            <img src="./images/gauge002.png" alt="피그마게이지">
+                            <p>Figma</p>
+                            <span><img src="./images/figma.svg" alt="#"></span>
                         </li>
                         <li>
-                            <img src="./images/photoshop.svg" alt="포토샵">
-                            <img class="base" src="./images/gauge.png" alt="바탕">
-                            <img src="./images/gauge003.png" alt="포토샵게이지">
+                            <p>Photoshop</p>
+                            <span><img src="./images/photoshop.svg" alt="#"></span>
                         </li>
                         <li>
-                            <img src="./images/illust.svg" alt="일러스트레이터">
-                            <img src="./images/gauge.png" alt="바탕">
-                            <img src="./images/gauge004.png" alt="일러스트레이터게이지">
+                            <p>illustrator</p>
+                            <span><img src="./images/illust.svg" alt="#"></span>
                         </li>
                         <li>
-                            <img src="./images/html.svg" alt="html">
-                            <img class="base" src="./images/gauge.png" alt="바탕">
-                            <img src="./images/gauge005.png" alt="html게이지">
+                            <p>HTML</p>
+                            <span><img src="./images/html.svg" alt="#"></span>
                         </li>
                         <li>
-                            <img src="./images/css.svg" alt="css">
-                            <img src="./images/gauge.png" alt="바탕">
-                            <img src="./images/gauge006.png" alt="css게이지">
+                            <p>CSS</p>
+                            <span><img src="./images/css.svg" alt="#"></span>
                         </li>
                         <li>
-                            <img src="./images/js.svg" alt="javascript">
-                            <img src="./images/gauge.png" alt="바탕">
-                            <img src="./images/gauge007.png" alt="자바스크립트게이지">
+                            <p>JavaScript</p>
+                            <span><img src="./images/js.svg" alt="#"></span>
                         </li>
                     </ul>
-                </li>
-            </ul>
-        </div>
-        <!-- 3페이지 - web_project -->
-        <div id="web_project">
-            <div class="left_web">
-                <h2>Introduce my works</h2>
-                <p>편의성에 중심을 두어<br>사용자를 생각한 디자인을 하고있습니다.</p>
-            </div>
-            <div class="main_web">
-                <div class="swiper lenox_swiper">
-                    <div class="swiper-wrapper lenox_pg">
-                        <div class="swiper-slide"><img src="./images/lenox_thums/lenox001.png" alt="레녹스 리디자인 썸네일1"></div>
-                        <div class="swiper-slide"><img src="./images/lenox_thums/lenox002.png" alt="레녹스 리디자인 썸네일2"></div>
-                        <div class="swiper-slide"><img src="./images/lenox_thums/lenox003.png" alt="레녹스 리디자인 썸네일3"></div>
-                        <div class="swiper-slide"><img src="./images/lenox_thums/lenox004.png" alt="레녹스 리디자인 썸네일4"></div>
+                    <!-- 메인 문구 -->
+                    <div class="title">
+                        <p>끊임없이 <em>소통하는</em> 디자이너</p>
+                        <h1>Portfolio</h1>
                     </div>
                 </div>
-                <div class="swiper fender_swiper">
-                    <div class="swiper-wrapper fender_pg">
-                        <div class="swiper-slide"><img src="./images/fender_thums/fender_001.png" alt="펜더 리디자인 썸네일1"></div>
-                        <div class="swiper-slide"><img src="./images/fender_thums/fender_002.png" alt="펜더 리디자인 썸네일2"></div>
-                        <div class="swiper-slide"><img src="./images/fender_thums/fender_003.png" alt="펜더 리디자인 썸네일3"></div>
-                        <div class="swiper-slide"><img src="./images/fender_thums/fender_004.png" alt="펜더 리디자인 썸네일4"></div>
-                        <div class="swiper-slide"><img src="./images/fender_thums/fender_005.png" alt="펜더 리디자인 썸네일5"></div>
-                        <div class="swiper-slide"><img src="./images/fender_thums/fender_006.png" alt="펜더 리디자인 썸네일5"></div>
+                <!-- 2page-profile -->
+                <div class="swiper-slide" id="profile">
+                    <!-- 왼쪽 -->
+                    <div class="left_info">
+                        <h2>Bae hyobin</h2>
+                        <p>1999.08.24</p>
+                        <span><img src="./images/profilepicture.png" alt="프로필사진"></span>
+                        <p>contact</p>
+                        <p>hyobin9824@gmail.com</p>
+                        <p>010-9288-9172</p>
+                    </div>
+                    <ul class="right_info">
+                        <li class="profile_detail education">
+                            <h3>Education</h3>
+                            <p><span>2025 . 12</span><span>그린컴퓨터아트학원 UI/UX웹디자인&웹퍼블리셔 과정 수료</span></p>
+                            <p><span>2025 . 02</span><span>경기대학교 일어일문전공/문예창작과 학사 졸업 </span></p>
+                            <p><span>2018 . 02</span><span>부광여자고등학교 졸업</span></p>
+                        </li>
+                        <li class="profile_detail license">
+                            <h3>License</h3>
+                            <p><span>2024 . 12</span><span>JPT 일본어 능력 시험 655점</span><span>YBM</span></p>
+                            <p><span>2019 . 04</span><span>운전면허 2종보통</span><span>인천서부경찰서</span></p>
+                        </li>
+                        <li class="profile_detail sub_profile">
+                            <h3>Profile</h3>
+                            <p><span>Live</span><span>인천광역시 서구</span></p>
+                            <p><span>MBTI</span><span>INTP</span></p>
+                            <p><span>Hobby</span><span>해외 뮤지컬 감상, 수공예</span></p>
+                            <p><span>Like</span><span>찻잔, 동물</span></p>
+                            <p><span>Goal</span><span>소통하며 나아가는 기획자</span></p>
+                            <p><span>Personality</span><span>좋은 이해자, 성실함, 신중함</span></p>
+                        </li>
+                        <li class="profile_detail skill">
+                            <h3>Skill</h3>
+                            <ul class="skill_info">
+                                <li>
+                                    <img src="./images/blub.svg" alt="기획">
+                                    <img src="./images/gauge.png" alt="바탕">
+                                    <img src="./images/gauge001.png" alt="기획게이지">
+                                </li>
+                                <li>
+                                    <img src="./images/figma.svg" alt="피그마">
+                                    <img src="./images/gauge.png" alt="바탕">
+                                    <img src="./images/gauge002.png" alt="피그마게이지">
+                                </li>
+                                <li>
+                                    <img src="./images/photoshop.svg" alt="포토샵">
+                                    <img class="base" src="./images/gauge.png" alt="바탕">
+                                    <img src="./images/gauge003.png" alt="포토샵게이지">
+                                </li>
+                                <li>
+                                    <img src="./images/illust.svg" alt="일러스트레이터">
+                                    <img src="./images/gauge.png" alt="바탕">
+                                    <img src="./images/gauge004.png" alt="일러스트레이터게이지">
+                                </li>
+                                <li>
+                                    <img src="./images/html.svg" alt="html">
+                                    <img class="base" src="./images/gauge.png" alt="바탕">
+                                    <img src="./images/gauge005.png" alt="html게이지">
+                                </li>
+                                <li>
+                                    <img src="./images/css.svg" alt="css">
+                                    <img src="./images/gauge.png" alt="바탕">
+                                    <img src="./images/gauge006.png" alt="css게이지">
+                                </li>
+                                <li>
+                                    <img src="./images/js.svg" alt="javascript">
+                                    <img src="./images/gauge.png" alt="바탕">
+                                    <img src="./images/gauge007.png" alt="자바스크립트게이지">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 3페이지 - web_project -->
+                <div class="swiper-slide" id="web_project">
+                    <div class="left_web">
+                        <h2>Introduce my works</h2>
+                        <p>편의성에 중심을 두어<br>사용자를 생각한 디자인을 하고있습니다.</p>
+                    </div>
+                    <div class="main_web">
+                        <div class="swiper lenox_swiper">
+                            <div class="swiper-wrapper lenox_pg">
+                                <div class="swiper-slide"><img src="./images/lenox_thums/lenox001.png" alt="레녹스 리디자인 썸네일1">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/lenox_thums/lenox002.png" alt="레녹스 리디자인 썸네일2">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/lenox_thums/lenox003.png" alt="레녹스 리디자인 썸네일3">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/lenox_thums/lenox004.png" alt="레녹스 리디자인 썸네일4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper fender_swiper">
+                            <div class="swiper-wrapper fender_pg">
+                                <div class="swiper-slide"><img src="./images/fender_thums/fender_001.png" alt="펜더 리디자인 썸네일1">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/fender_thums/fender_002.png" alt="펜더 리디자인 썸네일2">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/fender_thums/fender_003.png" alt="펜더 리디자인 썸네일3">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/fender_thums/fender_004.png" alt="펜더 리디자인 썸네일4">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/fender_thums/fender_005.png" alt="펜더 리디자인 썸네일5">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/fender_thums/fender_006.png" alt="펜더 리디자인 썸네일5">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper himart_swiper">
+                            <div class="swiper-wrapper himart_pg">
+                                <div class="swiper-slide"><img src="./images/himart_thums/hi_001.png" alt="하이마트 리디자인 썸네일1">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/himart_thums/hi_002.png" alt="하이마트 리디자인 썸네일2">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/himart_thums/hi_003.png" alt="하이마트 리디자인 썸네일3">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/himart_thums/hi_004.png" alt="하이마트 리디자인 썸네일4">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/himart_thums/hi_005.png" alt="하이마트 리디자인 썸네일5">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/himart_thums/hi_006.png" alt="하이마트 리디자인 썸네일6">
+                                </div>
+                                <div class="swiper-slide"><img src="./images/himart_thums/hi_007.png" alt="하이마트 리디자인 썸네일7">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_web">
+                        <a href="https://www.figma.com/proto/DhYbfL5jS7Gs55vwM2YlhV/%EA%B8%B0%ED%9A%8D%EC%84%9C?page-id=205%3A2&node-id=205-4&viewport=362%2C303%2C0.27&t=zHSPQPqNoD5GuCah-1&scaling=contain&content-scaling=fixed"
+                            target="_blank" id="lenox">Lenox ReDesign</a>
+                        <a href="https://www.figma.com/proto/DhYbfL5jS7Gs55vwM2YlhV/%EA%B8%B0%ED%9A%8D%EC%84%9C?page-id=282%3A46&node-id=288-244&p=f&viewport=-307%2C254%2C0.34&t=OngrQNQvEf93zwwP-1&scaling=contain&content-scaling=fixed"
+                            target="_blank" id="fender">Fender ReDesign</a>
+                        <a href="https://www.figma.com/proto/DhYbfL5jS7Gs55vwM2YlhV/%EA%B8%B0%ED%9A%8D%EC%84%9C?page-id=0%3A1&node-id=1-2&p=f&viewport=1283%2C417%2C0.31&t=lZ86OGPfVy1lAxDN-1&scaling=contain&content-scaling=fixed"
+                            target="_blank" id="himart">Himart ReDesign</a>
                     </div>
                 </div>
-                <div class="swiper himart_swiper">
-                    <div class="swiper-wrapper himart_pg">
-                        <div class="swiper-slide"><img src="./images/himart_thums/hi_001.png" alt="하이마트 리디자인 썸네일1"></div>
-                        <div class="swiper-slide"><img src="./images/himart_thums/hi_002.png" alt="하이마트 리디자인 썸네일2"></div>
-                        <div class="swiper-slide"><img src="./images/himart_thums/hi_003.png" alt="하이마트 리디자인 썸네일3"></div>
-                        <div class="swiper-slide"><img src="./images/himart_thums/hi_004.png" alt="하이마트 리디자인 썸네일4"></div>
-                        <div class="swiper-slide"><img src="./images/himart_thums/hi_005.png" alt="하이마트 리디자인 썸네일5"></div>
-                        <div class="swiper-slide"><img src="./images/himart_thums/hi_006.png" alt="하이마트 리디자인 썸네일6"></div>
-                        <div class="swiper-slide"><img src="./images/himart_thums/hi_007.png" alt="하이마트 리디자인 썸네일7"></div>
+                <!-- 4페이지 other_project -->
+                <div class="swiper-slide" id="other_project">
+                    <div class="left_btn">
+                        <button type="button" class="detail_pg">
+                            <p>상세페이지</p>
+                        </button>
+                        <button type="button" class="bnr_pg">
+                            <p>배너디자인</p>
+                        </button>
+                    </div>
+                    <div class="right_gallery">
+                        <div class="gallery detail_gallery">
+                            <div class="thumnail_wrapper"><img src="./images/detail/apple.png" alt="사과"></div>
+                            <div class="thumnail_wrapper"><img src="./images/detail/milk.jpg" alt="우유"></div>
+                        </div>
+                        <div class="gallery bnr_gallery">
+                            <div class="thumnail_wrapper"><img src="./images/banner/banchan.jpg" alt="반찬"></div>
+                            <div class="thumnail_wrapper"><img src="./images/banner/bnr_himart001.png" alt="하이마트1"></div>
+                            <div class="thumnail_wrapper"><img src="./images/banner/bnr_himart002.png" alt="하이마트2"></div>
+                            <div class="thumnail_wrapper"><img src="./images/banner/bnr_himart003.png" alt="하이마트3"></div>
+                            <div class="thumnail_wrapper"><img src="./images/banner/bnr_lenox001.png" alt="레녹스1"></div>
+                            <div class="thumnail_wrapper"><img src="./images/banner/bnr_lenox002.png" alt="레녹스2"></div>
+                            <div class="thumnail_wrapper"><img src="./images/banner/bnr_lush.jpg" alt="러쉬"></div>
+                            <div class="thumnail_wrapper"><img src="./images/banner/bnr_serum.jpg" alt="세럼"></div>
+                            <div class="thumnail_wrapper"><img src="./images/banner/bottega.jpg" alt="보테가"></div>
+                            <div class="thumnail_wrapper"><img src="./images/banner/skin.jpg" alt="피부과"></div>
+                            <div class="thumnail_wrapper"><img src="./images/banner/thom001.jpg" alt="톰브라운1"></div>
+                            <div class="thumnail_wrapper"><img src="./images/banner/thom002.jpg" alt="톰브라운2"></div>
+                            <div class="thumnail_wrapper"><img src="./images/banner/travel.jpg" alt="여행"></div>
+                        </div>
+                    </div>
+                    <div id="popup_bg">
+                        <div id="popup">
+                            <img src="" alt="이미지 크게하기">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="right_web">
-                <a href="https://www.figma.com/proto/DhYbfL5jS7Gs55vwM2YlhV/%EA%B8%B0%ED%9A%8D%EC%84%9C?page-id=205%3A2&node-id=205-4&viewport=362%2C303%2C0.27&t=zHSPQPqNoD5GuCah-1&scaling=contain&content-scaling=fixed" target="_blank" id="lenox">Lenox ReDesign</a>
-                <a href="https://www.figma.com/proto/DhYbfL5jS7Gs55vwM2YlhV/%EA%B8%B0%ED%9A%8D%EC%84%9C?page-id=282%3A46&node-id=288-244&p=f&viewport=-307%2C254%2C0.34&t=OngrQNQvEf93zwwP-1&scaling=contain&content-scaling=fixed" target="_blank" id="fender">Fender ReDesign</a>
-                <a href="https://www.figma.com/proto/DhYbfL5jS7Gs55vwM2YlhV/%EA%B8%B0%ED%9A%8D%EC%84%9C?page-id=0%3A1&node-id=1-2&p=f&viewport=1283%2C417%2C0.31&t=lZ86OGPfVy1lAxDN-1&scaling=contain&content-scaling=fixed" target="_blank" id="himart">Himart ReDesign</a>
-            </div>
-        </div>
-        <!-- 4페이지 other_project -->
-        <div id="other_project">
-            <div class="left_btn">
-                <button type="button" class="detail_pg"><p>상세페이지</p></button>
-                <button type="button" class="bnr_pg"><p>배너디자인</p></button>
-            </div>
-            <div class="right_gallery">
-                <div class="gallery detail_gallery">
-                    <div class="thumnail_wrapper"><img src="./images/detail/apple.png" alt="사과"></div>
-                    <div class="thumnail_wrapper"><img src="./images/detail/milk.jpg" alt="우유"></div>
-                </div>
-                <div class="gallery bnr_gallery">
-                    <div class="thumnail_wrapper"><img src="./images/banner/banchan.jpg" alt="반찬"></div>
-                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_himart001.png" alt="하이마트1"></div>
-                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_himart002.png" alt="하이마트2"></div>
-                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_himart003.png" alt="하이마트3"></div>
-                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_lenox001.png" alt="레녹스1"></div>
-                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_lenox002.png" alt="레녹스2"></div>
-                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_lush.jpg" alt="러쉬"></div>
-                    <div class="thumnail_wrapper"><img src="./images/banner/bnr_serum.jpg" alt="세럼"></div>
-                    <div class="thumnail_wrapper"><img src="./images/banner/bottega.jpg" alt="보테가"></div>
-                    <div class="thumnail_wrapper"><img src="./images/banner/skin.jpg" alt="피부과"></div>
-                    <div class="thumnail_wrapper"><img src="./images/banner/thom001.jpg" alt="톰브라운1"></div>
-                    <div class="thumnail_wrapper"><img src="./images/banner/thom002.jpg" alt="톰브라운2"></div>
-                    <div class="thumnail_wrapper"><img src="./images/banner/travel.jpg" alt="여행"></div>
+                <!-- 5페이지 -->
+                <div class="swiper-slide" id="last_pg">
+                    <p>Thank</p>
+                    <p>You</p>
+                    <p>for</p>
+                    <p>watching</p>
                 </div>
             </div>
-            <div id="popup_bg">
-                <div id="popup">
-                    <img src="" alt="이미지 크게하기">
-                </div>
-            </div>
-        </div>
-        <!-- 5페이지 -->
-        <div id="last_pg">
-            <p>Thank</p>
-            <p>You</p>
-            <p>for</p>
-            <p>watching</p>
         </div>
     </main>
 </body>

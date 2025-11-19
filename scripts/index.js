@@ -1,41 +1,33 @@
 //전체화면 휠
-/* const wrap = new Swiper('#wrap', {
+const nav = document.querySelectorAll('nav a')
+const homeBtn = document.querySelector('nav .homebtn')
+const profileBtn = document.querySelector('nav .profilebtn')
+const webBtn = document.querySelector('nav .webprojectbtn')
+const designBtn = document.querySelector('nav .designbtn')
+const wrap = new Swiper('.wrap', {
     direction:'vertical',
     mousewheel:true,
-    speed:500,
-}) */
-//header
-const allLink = document.querySelectorAll('header a')
-const homebtn = allLink[0]
-const profbtn = allLink[1]
-const webbtn = allLink[2]
-const designbtn = allLink[3]
+    speed:1000,
+    on: {
+        slideChangeTransitionEnd: function () {
+            for(let i of nav) i.classList.remove('active')
+            nav[this.activeIndex].classList.add('active')
+            setTimeout(() => {
+                ScrollTrigger.refresh(); // ★ Swiper 로드 후 강제 새로고침 ★
+            }, 0);
+        }
+    }
+})
 
-function removeAllActive() {
-    allLink.forEach(link => {
-        link.classList.remove('active');
-    });
-}
-
-homebtn.addEventListener('mouseover', () => {
-    removeAllActive();
-    homebtn.classList.add('active');
-});
-
-profbtn.addEventListener('mouseover', () => {
-    removeAllActive();
-    profbtn.classList.add('active');
-});
-
-webbtn.addEventListener('mouseover', () => {
-    removeAllActive();
-    webbtn.classList.add('active');
-});
-
-designbtn.addEventListener('mouseover', () => {
-    removeAllActive();
-    designbtn.classList.add('active');
-});
+nav.forEach((t, i)=>{ //header-nav click event
+    t.addEventListener('click',function(e){
+        e.preventDefault();
+        wrap.slideTo(i, 1000); //클릭한 메뉴와 동일한 index번째 슬라이드로 1초동안 이동
+        setTimeout(() => {
+            ScrollTrigger.refresh(); // ★ Swiper 로드 후 강제 새로고침 ★
+        }, 0);
+    })
+})
 
 // -----------------------------------------3페이지
 
@@ -47,38 +39,46 @@ const lenoxSwiper = document.querySelector('.main_web .lenox_swiper')
 const fenderSwiper = document.querySelector('.main_web .fender_swiper')
 const himartSwiper = document.querySelector('.main_web .himart_swiper')
 
-console.log(lenoxBtn,fenderBtn,himartBtn,lenoxSwiper,fenderSwiper,himartSwiper)
 
 lenoxBtn.addEventListener('mouseover',()=>{
     lenoxSwiper.style.opacity=1;
+    lenoxBtn.style.borderBottomColor = '#000';
     lenoxSwiper.style.zIndex = '20';
     lenoxSwiper.style.pointerEvents = 'auto';
     fenderSwiper.style.opacity=0;
+    fenderBtn.style.borderBottomColor = '#E0EAC8';
     fenderSwiper.style.zIndex = '10';
     fenderSwiper.style.pointerEvents = 'none';
     himartSwiper.style.opacity=0;
+    himartBtn.style.borderBottomColor = '#E0EAC8';
     himartSwiper.style.zIndex = '10';
     himartSwiper.style.pointerEvents = 'none';
 })
 fenderBtn.addEventListener('mouseover',()=>{
     lenoxSwiper.style.opacity=0;
+    lenoxBtn.style.borderBottomColor = '#E0EAC8';
     lenoxSwiper.style.zIndex = '10';
     lenoxSwiper.style.pointerEvents = 'none';
     fenderSwiper.style.opacity=1;
+    fenderBtn.style.borderBottomColor = '#000';
     fenderSwiper.style.zIndex = '20';
     fenderSwiper.style.pointerEvents = 'auto';
     himartSwiper.style.opacity=0;
+    himartBtn.style.borderBottomColor = '#E0EAC8';
     himartSwiper.style.zIndex = '10';
     himartSwiper.style.pointerEvents = 'none';
 })
 himartBtn.addEventListener('mouseover',()=>{
     lenoxSwiper.style.opacity=0;
+    lenoxBtn.style.borderBottomColor = '#E0EAC8';
     lenoxSwiper.style.zIndex = '10';
     lenoxSwiper.style.pointerEvents = 'none';
     fenderSwiper.style.opacity=0;
+    fenderBtn.style.borderBottomColor = '#E0EAC8';
     fenderSwiper.style.zIndex = '10';
     fenderSwiper.style.pointerEvents = 'none';
     himartSwiper.style.opacity=1;
+    himartBtn.style.borderBottomColor = '#000';
     himartSwiper.style.zIndex = '20';
     himartSwiper.style.pointerEvents = 'auto';
 })
@@ -122,15 +122,17 @@ const bnrBtn = document.querySelector('.left_btn .bnr_pg')
 const detailGallery = document.querySelector('.right_gallery .detail_gallery')
 const bnrGallery = document.querySelector('.right_gallery .bnr_gallery')
 
-console.log(detailBtn, detailGallery, bnrBtn, bnrGallery)
-
 detailBtn.addEventListener('click',()=>{
     detailGallery.style.display='grid';
     bnrGallery.style.display='none';
+    detailBtn.style.borderBottomColor = '#000';
+    bnrBtn.style.borderBottomColor = '#87B58D';
 })
 bnrBtn.addEventListener('click',()=>{
     bnrGallery.style.display='grid';
     detailGallery.style.display='none';
+    detailBtn.style.borderBottomColor = '#87B58D';
+    bnrBtn.style.borderBottomColor = '#000';
     return
 })
 // 썸네일보기
@@ -141,7 +143,9 @@ const popupBg = document.querySelector('#other_project #popup_bg')
 console.log(popupBg, detailthum)
 
 popupBg.addEventListener('click',()=>{
-    return popupBg.style.display = 'none';
+    popupBg.style.display = 'none';
+    wrap.mousewheel.enable();
+    return 
     })
 
     detailthum.forEach(function(element) {
@@ -149,7 +153,8 @@ popupBg.addEventListener('click',()=>{
             const clickedThum = this; 
             const newSrc = clickedThum.children[0].src; 
             popupBg.children[0].children[0].src = newSrc;
-            popupBg.style.display = 'flex'; 
+            popupBg.style.display = 'flex';
+            wrap.mousewheel.disable();/* 마우스 휠 막기 */
         });
     });
     bnrthum.forEach(function(element) {
@@ -158,5 +163,7 @@ popupBg.addEventListener('click',()=>{
             const newSrc = clickedThum.children[0].src; 
             popupBg.children[0].children[0].src = newSrc;
             popupBg.style.display = 'flex'; 
+            wrap.mousewheel.disable();/* 마우스 휠 막기 */
         });
     });
+

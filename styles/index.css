@@ -1,5 +1,5 @@
 /* 부드러운스크롤 */
-html {scroll-behavior: smooth;}
+body, html {scroll-behavior: smooth;}
 /* 봄바람체 */
 @font-face {
     font-family: 'HsBombaram21';
@@ -16,8 +16,7 @@ html {scroll-behavior: smooth;}
 }
 /* 메인 */
 main {width: 1920px; height: auto;}
-#page_wrap {}
-#page_wrap .swiper-slide {width: 100%; height: 100vh;}
+.swiper.wrap {height: 100vh;  width: 100%;}
 /* 헤더 */
 header {
     width: 100%; height: 60px; background-color: rgba(107,152,113,0.4);
@@ -38,7 +37,7 @@ header nav .active{background-color: #fff;}
 
 /* --------------------1pg-----------------------1pg */
 #home {
-    width: 100%; height: 100vh;
+    width: 100%; height: 1080px;
     background: url(../images/pg001.png) no-repeat ;
     background-size:100%; padding: 120px;
     position: relative;
@@ -58,7 +57,7 @@ header nav .active{background-color: #fff;}
 #home .title h1 {font-family: 'HsBombaram21'; font-size: 8.125rem;}
 /* --------------------2pg-----------------------2pg */
 #profile {
-    width: 100%; height: 100vh;
+    width: 100%; height: 1080px;
     background: url(../images/pg002.png) no-repeat ;
     background-size:100%; padding: 100px 120px;
     display: flex; gap: 130px; justify-content: center; align-items: center;
@@ -91,7 +90,7 @@ header nav .active{background-color: #fff;}
 /* --------------------3pg-----------------------3pg */
 #web_project {
     display: flex; gap: 80px; align-items: center; justify-content: center;
-    width: 100%; height: 100vh; position: relative;
+    width: 100%; height: 1080px; position: relative;
     background: url(../images/pg003.png) no-repeat ;
     background-size:100%; padding: 0 120px; overflow: hidden;
 }
@@ -109,47 +108,55 @@ header nav .active{background-color: #fff;}
 #web_project .main_web .himart_swiper {}
 #web_project .right_web {display: flex; flex-flow: column nowrap; gap: 100px;}
 #web_project .right_web a {display: inline-block; border-bottom: 1px solid #E0EAC8; padding-bottom: 3px; transition: all 0.5s ease;}
-#web_project .right_web a:hover {border-bottom-color: #000;}
+#web_project .right_web #lenox {border-bottom-color: #000;}
 /* --------------------4pg-----------------------4pg */
 #other_project {
-    width: 100%; height: 100vh;
+    width: 100%; height: 1080px;
     background: url(../images/pg004.png) no-repeat ;
     background-size:100%; padding: 120px;
     position: relative; overflow: hidden;
-    display: flex; flex-flow: row nowrap; gap: 750px; text-align: center;
+    display: flex; flex-flow: row nowrap; gap: 800px; text-align: center; 
 }
 #other_project .left_btn {
     display: flex; flex-flow: column nowrap; gap: 180px;
-    justify-content: center; height: 100%;
+    justify-content: center; height: 100%; position: relative; left: 300px;
 }
 #other_project .left_btn button {width: fit-content;}
-#other_project .left_btn button:hover {background: url(../images/star_after.svg) no-repeat; background-size: contain;}
 #other_project .left_btn button{
-    background: url(../images/star_before.svg) no-repeat; background-size: contain;
-    transition: 0.3s ease;
+    display: inline-block; border-bottom: 1px solid #87B58D;
+    padding-bottom: 3px; transition: all 0.5s ease;
 }
-#other_project .left_btn button p {
-    transform: translate(25px, 2px);
-}
-#other_project .left_btn .detail_pg {}
+#other_project .left_btn button p {}
+#other_project .left_btn .detail_pg {border-bottom-color: #000;}
 #other_project .left_btn .bnr_pg {}
 #other_project .right_gallery {}
 #other_project .right_gallery .gallery {
     display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 10px; max-width: 900px;
     position: absolute; top:257px;
-    transition: opacity 0.4s ease; display: none;
 }
-
+#other_project .right_gallery .bnr_gallery {
+    display: none;
+}
 
 #other_project .right_gallery .gallery .thumnail_wrapper {
     position: relative; border-radius: 8px; overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 #other_project .right_gallery .gallery .thumnail_wrapper img {
-    width: 120px; height: 120px; object-fit: cover;
+    width: 120px; height: 120px;
     cursor: pointer; transition: transform 0.2s; display: block;
 }
+#other_project .right_gallery > .detail_gallery .thumnail_wrapper img {
+    width: 100%; height: 500px;
+    object-fit: 100%, auto;
+}
+#other_project .right_gallery > .bnr_gallery .thumnail_wrapper img {
+    object-fit: cover; width: 120px;
+}
+#other_project .right_gallery > .bnr_gallery .thumnail_wrapper:nth-child(3) img {object-position: 80%;}
+#other_project .right_gallery > .bnr_gallery .thumnail_wrapper:nth-child(4) img{object-position: 20%;}
+#other_project .right_gallery > .bnr_gallery .thumnail_wrapper:nth-child(5) img {object-position: 30%;}
 #other_project .right_gallery .gallery .thumnail_wrapper img:hover {
     transform: scale(1.03);
 }
@@ -165,11 +172,11 @@ header nav .active{background-color: #fff;}
 }
 #popup img {
     width: auto; height: auto;
-    display: block; 
+    display: block; z-index: 999;
 }
 /* --------------------5pg-----------------------5pg */
 #last_pg {
-    width: 100%; height: 100vh;
+    width: 100%; height: 1080px;
     background-color: #81B988;
     position: relative; overflow: hidden;
     position: relative;
