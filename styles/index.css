@@ -171,7 +171,7 @@ header nav .active{background-color: #fff;}
     overflow-y: auto;  position: relative; 
 }
 #popup img {
-    width: auto; height: auto;
+    max-width: 1300px; height: auto;
     display: block; z-index: 999;
 }
 /* --------------------5pg-----------------------5pg */
